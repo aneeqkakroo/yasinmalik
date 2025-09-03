@@ -1,11 +1,8 @@
 // src/components/ui.js
 
 export function Container({ children, className = "" }) {
-  return (
-    <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>
-      {children}
-    </div>
-  );
+  // Hard CSS cap via .app-container + optional Tailwind extras
+  return <div className={`app-container ${className}`}>{children}</div>;
 }
 
 export function Section({ id, title, kicker, children }) {

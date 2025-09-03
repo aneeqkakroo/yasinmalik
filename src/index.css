@@ -2,3 +2,15 @@
 :root { --bg: #0a0a0a; }
 html, body, #root { height: 100%; }
 body { background: var(--bg); color: white; }
+
+.app-container{
+  max-width: 1200px;       /* ≈ 7xl */
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px){ .app-container{ padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px){ .app-container{ padding-left: 2rem; padding-right: 2rem; } }
+
+/* Make any media never overflow its box */
+img, video, iframe { max-width: 100%; height: auto; display: block; }
