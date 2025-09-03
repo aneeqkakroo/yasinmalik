@@ -7,15 +7,14 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left side: text */}
           <div>
-            <div className="inline-flex items-center gap-2 mb-4">
+            <div className="inline-flex flex-wrap items-center gap-2 mb-4">
               <Badge>Campaign Hub</Badge>
               <Badge>Verified Sources</Badge>
               <Badge>Peace & Due Process</Badge>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
-              Evidence-led campaign for{" "}
-              <span className="text-rose-500">Yasin Malik</span>
+            <h1 className="text-[clamp(28px,6vw,56px)] font-extrabold leading-tight text-white">
+              Evidence-led campaign for <span className="text-rose-500">Yasin Malik</span>
             </h1>
 
             <p className="mt-4 text-white/80 text-lg max-w-xl">
@@ -40,12 +39,12 @@ export default function Hero() {
           </div>
 
           {/* Right side: image */}
-          <div className="relative">
-            <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden border border-white/10 bg-white/5">
-              {/* Replace this with an authorized image */}
+          <div className="relative lg:justify-self-end">
+            <div className="mx-auto lg:mx-0 w-full max-w-[560px] aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 bg-white/5">
               <img
-                src="/ymhero.jpg"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
                 alt="Portrait"
+                loading="lazy"
                 className="h-full w-full object-cover"
               />
             </div>

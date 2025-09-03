@@ -3,14 +3,11 @@
 html, body, #root { height: 100%; }
 body { background: var(--bg); color: white; }
 
-.app-container{
-  max-width: 1200px;       /* ≈ 7xl */
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media (min-width: 640px){ .app-container{ padding-left: 1.5rem; padding-right: 1.5rem; } }
-@media (min-width: 1024px){ .app-container{ padding-left: 2rem; padding-right: 2rem; } }
+.app-container{max-width:1200px;margin:0 auto;padding:0 1rem}
+@media (min-width:640px){.app-container{padding:0 1.25rem}}
+@media (min-width:1024px){.app-container{padding:0 2rem}}
+/* prevent sideways scroll from wide media */
+html,body{overflow-x:hidden}
+img,video,iframe{max-width:100%;height:auto;display:block}
 
-/* Make any media never overflow its box */
-img, video, iframe { max-width: 100%; height: auto; display: block; }
+.gie-embed, .gie-embed iframe, .gie-single { max-width: 100% !important; }

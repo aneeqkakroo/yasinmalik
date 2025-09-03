@@ -1,22 +1,16 @@
 // src/components/ui.js
 
 export function Container({ children, className = "" }) {
-  // Hard CSS cap via .app-container + optional Tailwind extras
   return <div className={`app-container ${className}`}>{children}</div>;
 }
-
 export function Section({ id, title, kicker, children }) {
   return (
-    <section id={id} className="py-16 sm:py-20">
+    <section id={id} className="py-12 sm:py-16 lg:py-20">
       <Container>
-        <div className="mb-10">
-          {kicker && (
-            <p className="uppercase tracking-widest text-sm text-rose-500 font-semibold">
-              {kicker}
-            </p>
-          )}
+        <div className="mb-6 sm:mb-8">
+          {kicker && <p className="uppercase tracking-widest text-xs sm:text-sm text-rose-500 font-semibold">{kicker}</p>}
           {title && (
-            <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-balance">
               {title}
             </h2>
           )}
@@ -26,6 +20,7 @@ export function Section({ id, title, kicker, children }) {
     </section>
   );
 }
+
 
 export function Card({ children, className = "" }) {
   return (
