@@ -27,7 +27,7 @@ export default function Home() {
              due process, medical needs, and international humanitarian concern.
           </p>
           <div className="mt-4">
-            <Button to="/biography">Read more</Button>
+            <Button to="/biography#bio">Read more</Button>
           </div>
         </Card>
            <TimelineList items={timeline.slice(0, 4)}  />

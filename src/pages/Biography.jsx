@@ -11,7 +11,7 @@ import { Section } from "../components/ui.jsx";
 
 export default function Bio() {
   return (
-    <Section title="Muhammad Yasin Malik" kicker="Biography">
+    <Section title="Muhammad Yasin Malik" kicker="Biography" id="bio">
       {/* Page Header */}
       <header className="mb-10">
         <p className="mt-2 text-base opacity-80">

@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
-import ScrollToHash from "./components/ScrollToHash.jsx";
+import ScrollHandler from "./components/ScrollHandler.jsx";
 
 // Pages
 import Home from "./pages/Home.jsx";
@@ -31,7 +31,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       <Navbar />
       <main className="pt-20">
-        <ScrollToHash />
+        <ScrollHandler />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
