@@ -3,6 +3,7 @@ import TimelineList from "../components/TimelineList.jsx";
 import timeline from "../data/timeline.js";
 import Slideshow from "../components/Slideshow.jsx";
 import mediaPics from "../data/aboutmediapics.js";
+import YouTubeEmbed from "../components/YoutubeEmbed.jsx";
 
 
 export default function About() {
@@ -67,6 +68,23 @@ export default function About() {
     A rotating selection of press photos and program stills.
   </p>
 </Card>
+
+   <Card className="!p-0 overflow-hidden">
+  <div className="grid grid-rows-[auto_1fr] h-[380px]">
+    <h4 className="px-4 pt-4 pb-2 text-lg font-semibold text-white">
+      Who is Yasin Malik?
+    </h4>
+    <YouTubeEmbed
+      url="https://youtu.be/VjrhbxqHUBY"
+      title="Aik Din Geo Ke Sath"
+      cover
+      className="!rounded-none !border-0"
+    />
+  </div>
+</Card>
+
+
+
 
     <Card className="p-6">
       <h4 className="text-lg font-semibold text-white mb-4">Related Links</h4>
