@@ -23,9 +23,6 @@ export default function Media() {
         ))}
       </div>
 
-      <Card className="mt-6 p-6 text-white/70 text-sm">
-        Only upload images you own or have permission to use. Add credits.
-      </Card>
     </Section>
   );
 }
