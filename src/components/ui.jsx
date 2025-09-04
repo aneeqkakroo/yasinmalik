@@ -1,4 +1,5 @@
 // src/components/ui.js
+import { Link } from "react-router-dom";
 
 export function Container({ children, className = "" }) {
   return <div className={`app-container ${className}`}>{children}</div>;
@@ -39,12 +40,20 @@ export function Badge({ children }) {
   );
 }
 
-export function Button({ href = "#", children }) {
+export function Button({ href, to, children }) {
+  const base =
+    "inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-white/10 bg-rose-600/90 hover:bg-rose-500 text-white transition";
+
+  if (to) {
+    return (
+      <Link to={to} className={base}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <a
-      href={href}
-      className="inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-white/10 bg-rose-600/90 hover:bg-rose-500 text-white transition"
-    >
+    <a href={href || "#"} className={base}>
       {children}
     </a>
   );

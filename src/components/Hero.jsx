@@ -1,4 +1,6 @@
 import { Badge, Button, Container } from "./ui.jsx";
+import { Link } from "react-router-dom";
+
 
 export default function Hero() {
   return (
@@ -23,13 +25,13 @@ export default function Hero() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <Button href="/get-involved">Get Involved</Button>
-              <a
-                href="/resources"
+              <Button to="/get-involved">Get Involved</Button>
+              <Link
+                to="/resources"
                 className="inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-white/10 bg-white/5 text-white hover:bg-white/10 transition"
               >
                 Browse Resources
-              </a>
+              </Link>
             </div>
 
             <div className="mt-6 flex items-center gap-4 text-white/70 text-sm">

@@ -22,7 +22,7 @@ export default function About() {
             has appealed to seek the death penalty.
           </p>
           <div className="mt-4">
-            <Button href="/biography">Read more</Button>
+            <Button to="/biography">Read more</Button>
           </div>
         </Card>
         </div>
@@ -40,8 +40,9 @@ export default function About() {
 {/* Next Row */}
       <div className="mt-8 grid md:grid-cols-2 gap-8">
   {/* First column: Timeline */}
-  <TimelineList items={timeline} id="timeline"/>
-
+  <div id="timeline" className="scroll-mt-28">
+    <TimelineList items={timeline}/>
+  </div>
   {/* Second column: stack cards */}
   <div className="flex flex-col gap-8">
     <Card className="p-6">

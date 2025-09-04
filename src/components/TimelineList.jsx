@@ -22,7 +22,7 @@ export default function TimelineList({ items = [] }) {
           </li>
         ))}
       </ol>
-      <Button href="/about">Complete Timeline</Button>
+      <Button to="/about#timeline">Complete Timeline</Button>
     </Card>
   );
 }
