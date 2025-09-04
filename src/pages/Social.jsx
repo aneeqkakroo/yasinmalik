@@ -1,6 +1,6 @@
 import { Section } from "../components/ui.jsx";
 import EngagementCard from "../components/EngagementCard.jsx";
-import engagements from "../data/engagements.js";
+import engagements from "../data/social.js";
 
 export default function Social() {
   return (
