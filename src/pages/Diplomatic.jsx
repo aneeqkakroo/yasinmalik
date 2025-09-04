@@ -2,9 +2,9 @@ import { Section } from "../components/ui.jsx";
 import EngagementCard from "../components/EngagementCard.jsx";
 import engagements from "../data/engagements.js";
 
-export default function Engagements() {
+export default function Diplomatic() {
   return (
-    <Section title="Political Engagements" kicker="Diplomacy">
+    <Section title="Diplomatic Engagements" kicker="Engagements">
       <div className="grid gap-6">
         {engagements.map((e) => (
           <EngagementCard key={e.id} item={e} />

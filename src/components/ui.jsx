@@ -21,7 +21,6 @@ export function Section({ id, title, kicker, children }) {
   );
 }
 
-
 export function Card({ children, className = "" }) {
   return (
     <div

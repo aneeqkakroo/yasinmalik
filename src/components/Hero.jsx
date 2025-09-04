@@ -2,7 +2,7 @@ import { Badge, Button, Container } from "./ui.jsx";
 
 export default function Hero() {
   return (
-    <section className="pt-28 sm:pt-32 pb-16 bg-gradient-to-b from-black via-zinc-950 to-black">
+    <section className="pt-8 sm:pt-16 pb-8 bg-gradient-to-b from-black via-zinc-950 to-black">
       <Container>
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left side: text */}
@@ -14,7 +14,7 @@ export default function Hero() {
             </div>
 
             <h1 className="text-[clamp(28px,6vw,56px)] font-extrabold leading-tight text-white">
-              Evidence-led campaign for <span className="text-rose-500">Yasin Malik</span>
+              International campaign Justice for <span className="text-rose-500">Yasin Malik</span>
             </h1>
 
             <p className="mt-4 text-white/80 text-lg max-w-xl">
@@ -42,10 +42,11 @@ export default function Hero() {
           <div className="relative lg:justify-self-end">
             <div className="mx-auto lg:mx-0 w-full max-w-[560px] aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 bg-white/5">
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
+                src="https://media.gettyimages.com/id/468911758/photo/srinagar-india-kashmiri-separatist-leader-and-jklf-chairman-yasin-malik-addressing-press.jpg?s=612x612&w=0&k=20&c=MyAy1F1psy6OER0ToMOGzgJWWim56qLuCvbGHQa_Qwg="
                 alt="Portrait"
                 loading="lazy"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-left"
+                style={{ objectPosition: "left 50%" }}
               />
             </div>
           </div>

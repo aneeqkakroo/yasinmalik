@@ -1,4 +1,4 @@
-export default [
+const mediaPics =  [
         {
           src: "https://media.gettyimages.com/id/151436886/photo/srinagar-kashmir-india-activists-of-the-pro-independence-jammu-and-kashmir-liberation-front.jpg?s=612x612&w=0&k=20&c=xO-IjtBywsfeRpFKJdy21Fhx3gwlG2VpoQ5h0z52wOg=",
           alt: "Rally in Srinagar",
@@ -44,6 +44,11 @@ export default [
     src: "https://media.gettyimages.com/id/88914632/photo/india-yasin-malik-chairman-of-jammu-and-kashmir-liberation-front-with-family-members-of-missing.jpg?s=612x612&w=0&k=20&c=-59FHy7t4noo5QVOsduF-oHY_nnIBs6Yaq5RluENEuo=",
     alt: "Sit in for Missing Persons",
   },
+    {
+    id: "m4",
+    src: "a",
+    alt: "Sit in with Sikhs",
+  },
       {
     id: "m4",
     src: "https://media.gettyimages.com/id/874043894/photo/srinagar-india-chairman-of-jammu-and-kashmir-liberation-front-yasin-malik-addressing-press.jpg?s=612x612&w=0&k=20&c=6qWsQ0wBqbUlYQwZCzylUvdYN5hoOAdrVPN-qVYSsUU=",
@@ -70,3 +75,4 @@ export default [
     alt: "Rally in Kashmir",
   },
 ];
+export default mediaPics;

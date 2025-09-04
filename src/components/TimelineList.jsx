@@ -1,4 +1,4 @@
-import { Card } from "./ui.jsx";
+import { Card, Button} from "./ui.jsx";
 
 export default function TimelineList({ items = [] }) {
   return (
@@ -22,6 +22,7 @@ export default function TimelineList({ items = [] }) {
           </li>
         ))}
       </ol>
+      <Button href="/about">Complete Timeline</Button>
     </Card>
   );
 }
