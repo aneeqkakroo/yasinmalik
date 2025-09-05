@@ -208,9 +208,7 @@ export default function Bio() {
       {/* Footer Note */}
       <footer className="pt-6 border-t text-sm opacity-70">
         <p>
-          <em>Note:</em> This page summarises a narrative provided by the requester. For a publication or campaign site,
-          consider adding references and third‑party citations (news reports, court documents, and human rights
-          organisations) to corroborate specific claims and dates.
+          <em>Compiler:</em> Khawaja Aneeq Kakroo.
         </p>
       </footer>
     </Section>

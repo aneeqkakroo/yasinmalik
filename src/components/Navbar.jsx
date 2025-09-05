@@ -36,9 +36,9 @@ export default function Navbar() {
           className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-xl"
           aria-label="Go to home"
         >
-          <img src="/YM.png" alt="Save Yasin Malik logo" width="30" height="30" className="rounded-lg"
+          <img src="/YM.png" alt="Justice for Yasin Malik logo" width="30" height="30" className="rounded-lg"
                style={{ filter: "brightness(0.9) sepia(0.3) saturate(2) hue-rotate(-20deg)" }} />
-          <div className="font-bold text-white">Save Yasin Malik</div>
+          <div className="font-bold text-white">Justice for Yasin Malik</div>
         </button>
 
         {/* Desktop Nav */}

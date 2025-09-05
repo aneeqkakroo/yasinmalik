@@ -2,6 +2,8 @@ import Hero from "../components/Hero.jsx";
 import { Section, Card, Button} from "../components/ui.jsx";
 import TimelineList from "../components/TimelineList.jsx";
 import timeline from "../data/timeline.js";
+import NumbersBanner from "../components/NumbersBanner.jsx";
+import { daysSince } from "../data/daysSince.js";
 
 export default function Home() {
   return (
@@ -35,6 +37,16 @@ export default function Home() {
           {/* Timeline preview */}
         </div>
       </Section>
+
+      <NumbersBanner
+        bg="https://media.gettyimages.com/id/3018449/photo/indian-policemen-arrest-yasin-malik-the-chairman-of-jammu-and-kashmir-libration-front-and-some.jpg?s=612x612&w=0&k=20&c=KY6-tAxtR8wp26ugbOwdzcNFXT9RCoUq9I4lGyS6i7k=" // or any URL
+        title=""
+        targets={{
+        petitions: 12500,                // Petition signs
+        daysInJail: daysSince("2019-02-22"), // Auto-updating days in jail
+        fabricatedCases: 5,              // Fabricated cases
+      }}
+      />
     </>
   );
 }
