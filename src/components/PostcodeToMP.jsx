@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Section, Card, Button } from "../components/ui.jsx";
 import Papa from "papaparse";
 
 function normConstituency(s = "") {
@@ -129,13 +130,13 @@ export default function PostcodeToMP() {
 
   return (
     <div className="w-full max-w-2xl mx-auto p-4">
-      <div className="rounded-2xl border border-gray-200 shadow-sm p-4 bg-black">
+      <Card className="rounded-2xl border border-gray-200 shadow-sm p-4 bg-black">
         <h2 className="text-xl font-semibold mb-3">Find your MP by Postcode</h2>
 
-        <form onSubmit={handleLookup} className="flex gap-2 items-center">
+        <form onSubmit={handleLookup} className="flex flex-col gap-2 sm:flex-row sm:items-center">
           <input
             type="text"
-            placeholder="Enter UK postcode (e.g., CB1 3LS)"
+            placeholder="Enter UK postcode (e.g., NN1 2TY)"
             className="flex-1 rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black/20"
             value={postcode}
             onChange={(e) => setPostcode(e.target.value)}
@@ -144,7 +145,7 @@ export default function PostcodeToMP() {
           <button
             type="submit"
             disabled={!canSearch || loading}
-            className="rounded-xl px-4 py-2 bg-black text-white disabled:opacity-50"
+            className="w-full sm:w-auto rounded-xl px-4 py-3 text-base bg-black text-white disabled:opacity-50"
           >
             {loading ? "Searching..." : "Search"}
           </button>
@@ -154,7 +155,7 @@ export default function PostcodeToMP() {
         {apiError && <div className="mt-3 text-sm text-red-600">{apiError}</div>}
 
         {constituency && (
-          <div className="mt-4 text-sm text-gray-700">
+          <div className="mt-4 text-sm text-white-700">
             Constituency: <span className="font-medium">{constituency}</span>
           </div>
         )}
@@ -180,7 +181,7 @@ export default function PostcodeToMP() {
         <div className="mt-4 text-xs text-gray-500">
           Click the email to open your mail app with subject & body prefilled.
         </div>
-      </div>
+      </Card>
     </div>
   );
 }
