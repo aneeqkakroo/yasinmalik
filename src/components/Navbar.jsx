@@ -25,6 +25,7 @@ const navItems = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileEngOpen, setMobileEngOpen] = useState(false);
+  const [engOpen, setEngOpen] = useState(false); // desktop dropdown
   const navigate = useNavigate();
 
   return (
@@ -36,8 +37,14 @@ export default function Navbar() {
           className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-xl"
           aria-label="Go to home"
         >
-          <img src="/YM.png" alt="Justice for Yasin Malik logo" width="30" height="30" className="rounded-lg"
-               style={{ filter: "brightness(0.9) sepia(0.3) saturate(2) hue-rotate(-20deg)" }} />
+          <img
+            src="/YM.png"
+            alt="Justice for Yasin Malik logo"
+            width="30"
+            height="30"
+            className="rounded-lg"
+            style={{ filter: "brightness(0.9) sepia(0.3) saturate(2) hue-rotate(-20deg)" }}
+          />
           <div className="font-bold text-white">Justice for Yasin Malik</div>
         </button>
 
@@ -46,17 +53,31 @@ export default function Navbar() {
           {navItems.map((item, i) => {
             if (item.children) {
               return (
-                <div key={`dropdown-${i}`} className="relative group">
-                  <button type="button" className="inline-flex items-center gap-1 hover:text-white transition"
-                          aria-haspopup="menu" aria-expanded="false">
+                <div
+                  key={`dropdown-${i}`}
+                  className="relative"
+                  onMouseEnter={() => setEngOpen(true)}
+                  onMouseLeave={() => setEngOpen(false)}
+                  onFocus={() => setEngOpen(true)}           // keyboard
+                  onBlur={(e) => {
+                    if (!e.currentTarget.contains(e.relatedTarget)) setEngOpen(false);
+                  }}
+                >
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-1 hover:text-white transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-md px-1"
+                    aria-haspopup="menu"
+                    aria-expanded={engOpen}
+                  >
                     {item.label}
-                    <ChevronDown className="h-4 w-4 opacity-80 group-hover:opacity-100 transition" />
+                    <ChevronDown className={`h-4 w-4 opacity-80 transition ${engOpen ? "rotate-180 opacity-100" : ""}`} />
                   </button>
+
+                  {/* Menu: no gap → top-full; state controls visibility */}
                   <div
                     role="menu"
-                    className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition
-                               absolute right-0 mt-2 min-w-[220px] rounded-xl border border-white/10
-                               bg-black/90 backdrop-blur p-2 z-50"
+                    className={`absolute right-0 top-full min-w-[220px] rounded-xl border border-white/10 bg-black/90 backdrop-blur p-2 z-50 transition
+                                ${engOpen ? "visible opacity-100 translate-y-1" : "invisible opacity-0 -translate-y-1"}`}
                   >
                     {item.children.map((child) => (
                       <NavLink
@@ -106,7 +127,9 @@ export default function Navbar() {
         <button
           className="md:hidden text-white -mr-2 inline-flex items-center justify-center p-3 rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded={open}
+          aria-label="Toggle menu"
+          aria-controls="mobile-menu"
+          aria-expanded={open}
         >
           {open ? <X /> : <Menu />}
         </button>

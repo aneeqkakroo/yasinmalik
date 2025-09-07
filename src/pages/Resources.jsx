@@ -10,7 +10,7 @@ export default function Resources() {
             <div className="text-xs text-white/60">
               {r.type} • {r.meta}
             </div>
-            <a href={r.href} className="mt-1 block font-semibold text-white hover:underline">
+            <a href={r.href} className="mt-1 block font-semibold text-white hover:underline" target="_blank">
               {r.title}
             </a>
           </Card>
