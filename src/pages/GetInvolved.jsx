@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Section, Card, Button } from "../components/ui.jsx";
 import campaigns from "../data/campaigns.js";
 import Toast from "../components/Toast.jsx";
+import PostcodeToMP from "../components/PostcodeToMP";
 
 export default function GetInvolved() {
   const [status, setStatus] = useState({ state: "idle", msg: "" });
@@ -46,6 +47,7 @@ export default function GetInvolved() {
   }
 
   return (
+    <>
     <Section title="Get Involved" kicker="Action">
       <div className="grid lg:grid-cols-3 gap-6">
         {campaigns.map((c) => (
@@ -54,7 +56,7 @@ export default function GetInvolved() {
             <h4 className="mt-2 text-lg font-semibold text-white">{c.title}</h4>
             <p className="mt-2 flex-1 text-sm text-white/80">{c.desc}</p>
             <div className="mt-4">
-              <Button href={c.href}>{c.cta}</Button>
+              <Button to={c.to} href={c.href}>{c.cta}</Button>
             </div>
           </Card>
         ))}
@@ -107,5 +109,12 @@ export default function GetInvolved() {
         onClose={() => setStatus({ state: "idle", msg: "" })}
       />
     </Section>
+    {/*MP Finder*/}
+    <Section title="Email your MP 🇬🇧" kicker="Campaign" id="MP">
+    <div className=" bg-black-200">
+      <PostcodeToMP />
+    </div>
+    </Section>
+    </>
   );
 }

@@ -1,8 +1,10 @@
 import { Section, Card } from "../components/ui.jsx";
+import  InstagramEmbed from "../components/InstagramEmbed.jsx";
 import media from "../data/media.js";
 
 export default function Media() {
   return (
+    <>
     <Section title="Media Archives" kicker="Archive">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {media.map((m) => (
@@ -24,5 +26,10 @@ export default function Media() {
       </div>
 
     </Section>
+
+    <Section title="Instagram" kicker="Archive">
+        <InstagramEmbed url="https://www.instagram.com/p/DN6PJo_DVTx/?utm_source=ig_embed&utm_campaign=loading" />
+    </Section>
+    </>
   );
 }

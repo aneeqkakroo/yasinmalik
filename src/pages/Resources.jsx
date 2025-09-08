@@ -1,6 +1,6 @@
 import { Section, Card } from "../components/ui.jsx";
 import resources from "../data/resources.js";
-import PostcodeToMP from "../components/PostcodeToMP";
+
 
 export default function Resources() {
   return (
@@ -18,12 +18,6 @@ export default function Resources() {
           </Card>
         ))}
       </div>
-    </Section>
-    {/*MP Finder*/}
-    <Section title="MP Finder" kicker="Campaign">
-      <div className=" bg-black-200">
-      <PostcodeToMP />
-    </div>
     </Section>
     </>
   );

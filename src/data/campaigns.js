@@ -4,7 +4,7 @@ export default [
     title: "Email your MP/Representative",
     desc: "One-click letter with citations asking for due process and medical access.",
     cta: "Start now",
-    href: "#",
+    to: "/get-involved#MP",
   },
   {
     id: "c2",

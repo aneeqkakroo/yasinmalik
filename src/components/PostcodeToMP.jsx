@@ -27,7 +27,7 @@ I would appreciate your response and any action you can take.
 
 Kind regards,
 [Your name]
-[Your full postcode]`;
+{{POSTCODE}}`;
 
 function fillTemplate(str, vars) {
   return str
@@ -180,6 +180,7 @@ export default function PostcodeToMP() {
 
         <div className="mt-4 text-xs text-gray-500">
           Click the email to open your mail app with subject & body prefilled.
+          Don't forget to edit your name at end of email.
         </div>
       </Card>
     </div>
