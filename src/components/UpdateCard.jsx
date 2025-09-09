@@ -1,5 +1,5 @@
 // src/components/UpdateCard.jsx
-import YouTubeEmbed from "../components/YoutubeEmbed.jsx";
+import YouTubeEmbed from "./YouTubeEmbed.jsx";
 import { Card } from "./ui.jsx";
 
 function MediaBlock({ media }) {
