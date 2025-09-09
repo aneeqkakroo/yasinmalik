@@ -7,7 +7,7 @@ const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Yasin Malik" },
 
-  // 3rd item: dropdown
+  // Engagements dropdown
   {
     label: "Engagements",
     children: [
@@ -17,15 +17,29 @@ const navItems = [
     ],
   },
 
-  { to: "/media", label: "Media Archives" },
+  // Media / Updates dropdown (new)
+  {
+    label: "Media / Updates",
+    children: [
+      { to: "/updates", label: "Latest Updates" },
+      { to: "/socialmedia", label: "Social Media Highlights" },
+      { to: "/media", label: "Media Archive" },
+    ],
+  },
+
   { to: "/resources", label: "Resources" },
   { to: "/get-involved", label: "Take Action!", cta: true },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [mobileEngOpen, setMobileEngOpen] = useState(false);
-  const [engOpen, setEngOpen] = useState(false); // desktop dropdown
+
+  // Desktop: which dropdown index is open (null = none)
+  const [openMenu, setOpenMenu] = useState(null);
+
+  // Mobile: which dropdown index is open (null = none)
+  const [mobileOpenIdx, setMobileOpenIdx] = useState(null);
+
   const navigate = useNavigate();
 
   return (
@@ -52,32 +66,33 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6 text-sm text-white/80" aria-label="Primary">
           {navItems.map((item, i) => {
             if (item.children) {
+              const isOpen = openMenu === i;
               return (
                 <div
                   key={`dropdown-${i}`}
                   className="relative"
-                  onMouseEnter={() => setEngOpen(true)}
-                  onMouseLeave={() => setEngOpen(false)}
-                  onFocus={() => setEngOpen(true)}           // keyboard
+                  onMouseEnter={() => setOpenMenu(i)}
+                  onMouseLeave={() => setOpenMenu(null)}
+                  onFocus={() => setOpenMenu(i)} // keyboard
                   onBlur={(e) => {
-                    if (!e.currentTarget.contains(e.relatedTarget)) setEngOpen(false);
+                    if (!e.currentTarget.contains(e.relatedTarget)) setOpenMenu(null);
                   }}
                 >
                   <button
                     type="button"
                     className="inline-flex items-center gap-1 hover:text-white transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-md px-1"
                     aria-haspopup="menu"
-                    aria-expanded={engOpen}
+                    aria-expanded={isOpen}
                   >
                     {item.label}
-                    <ChevronDown className={`h-4 w-4 opacity-80 transition ${engOpen ? "rotate-180 opacity-100" : ""}`} />
+                    <ChevronDown className={`h-4 w-4 opacity-80 transition ${isOpen ? "rotate-180 opacity-100" : ""}`} />
                   </button>
 
                   {/* Menu: no gap → top-full; state controls visibility */}
                   <div
                     role="menu"
                     className={`absolute right-0 top-full min-w-[220px] rounded-xl border border-white/10 bg-black/90 backdrop-blur p-2 z-50 transition
-                                ${engOpen ? "visible opacity-100 translate-y-1" : "invisible opacity-0 -translate-y-1"}`}
+                                ${isOpen ? "visible opacity-100 translate-y-1" : "invisible opacity-0 -translate-y-1"}`}
                   >
                     {item.children.map((child) => (
                       <NavLink
@@ -102,7 +117,7 @@ export default function Navbar() {
                 <NavLink
                   key={item.to}
                   to={item.to}
-                  className="ml-2 inline-flex items-center rounded-xl bg-rose-600/90 text-white px-3 py-1.5 text-sm font-semibold hover:bg-white/90 transition"
+                  className="ml-2 inline-flex items-center rounded-xl bg-rose-600/90 text-white px-3 py-1.5 text-sm font-semibold hover:bg-rose-500 transition"
                 >
                   {item.label}
                 </NavLink>
@@ -142,19 +157,20 @@ export default function Navbar() {
             <nav className="flex flex-col" aria-label="Mobile">
               {navItems.map((item, i) => {
                 if (item.children) {
+                  const isOpen = mobileOpenIdx === i;
                   return (
                     <div key={`m-dropdown-${i}`} className="py-1">
                       <button
-                        onClick={() => setMobileEngOpen((v) => !v)}
+                        onClick={() => setMobileOpenIdx(isOpen ? null : i)}
                         className="w-full flex items-center justify-between py-3 text-base text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-lg"
-                        aria-expanded={mobileEngOpen}
-                        aria-controls="mobile-engagements"
+                        aria-expanded={isOpen}
+                        aria-controls={`mobile-dd-${i}`}
                       >
                         <span>{item.label}</span>
-                        <ChevronDown className={`h-5 w-5 transition ${mobileEngOpen ? "rotate-180" : ""}`} />
+                        <ChevronDown className={`h-5 w-5 transition ${isOpen ? "rotate-180" : ""}`} />
                       </button>
-                      {mobileEngOpen && (
-                        <div id="mobile-engagements" className="pl-3">
+                      {isOpen && (
+                        <div id={`mobile-dd-${i}`} className="pl-3">
                           {item.children.map((child) => (
                             <NavLink
                               key={child.to}

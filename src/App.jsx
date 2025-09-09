@@ -13,6 +13,8 @@ import Media from "./pages/Media.jsx";
 import Resources from "./pages/Resources.jsx";
 import GetInvolved from "./pages/GetInvolved.jsx";
 import Bio from "./pages/Biography.jsx";
+import LatestUpdates from "./pages/LatestUpdates.jsx";
+import SocialMedia from "./pages/SocialMedia.jsx";
 
 // Optional: simple 404 component
 function NotFound() {
@@ -39,9 +41,12 @@ export default function App() {
           <Route path="/engagements/social" element={<Social />} />
           <Route path="/engagements/diplomatic" element={<Diplomatic />} />
           <Route path="/media" element={<Media />} />
+          <Route path="/updates" element={<LatestUpdates />} />
+          <Route path="/socialmedia" element={<SocialMedia />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/biography" element={<Bio />} />
+        
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
