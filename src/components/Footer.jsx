@@ -9,8 +9,8 @@ import { Container } from "./ui.jsx";
 const defaultSocials = [
   { name: "X (Twitter)", href: "https://x.com/yasinjklf", key: "x" },
   { name: "Instagram",   href: "https://www.instagram.com/yasinmalik.official", key: "ig" },
-  { name: "YouTube",     href: "https://www.youtube.com/@Aneeq.kakroo", key: "yt" },
-  { name: "Facebook",    href: "https://www.facebook.com/YasinMalikJKLF", key: "fb" },
+  { name: "YouTube",     href: "https://www.youtube.com/@yasinmalik.official", key: "yt" },
+  { name: "Facebook",    href: "https://www.facebook.com/yasinmalik.official", key: "fb" },
 ];
 
 // Minimal inline SVG icons (adapt to currentColor)

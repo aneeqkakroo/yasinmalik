@@ -34,5 +34,12 @@ export default [
     href: "https://jang.com.pk/news/1504680?fbclid=IwY2xjawMqrMVleHRuA2FlbQIxMQABHkeHh1TJ4pqXR2cfXDAVUm4Sxc7miuuUr3s1YtwkYzdpRLDDkPL9CxBFVTDq_aem_JbvyL5jfqmNfT3sPoT94hA",
     meta: "Hamid Mir",
   },
+  {
+    id: "r6",
+    type: "Article",
+    title: "Yasin Malik: From Gun to Peace — Why India Must Reconsider",
+    href: "https://drsyednazirgilani.com/2025/08/19/yasin-malik-from-gun-to-peace-why-india-must-reconsider/",
+    meta: "Dr. Syed Nazir Gillani",
+  },
 ];
 
