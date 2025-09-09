@@ -19,7 +19,7 @@ const navItems = [
 
   { to: "/media", label: "Media Archives" },
   { to: "/resources", label: "Resources" },
-  { to: "/get-involved", label: "Get Involved", cta: true },
+  { to: "/get-involved", label: "Take Action!", cta: true },
 ];
 
 export default function Navbar() {
@@ -102,7 +102,7 @@ export default function Navbar() {
                 <NavLink
                   key={item.to}
                   to={item.to}
-                  className="ml-2 inline-flex items-center rounded-xl bg-white text-black px-3 py-1.5 text-sm font-semibold hover:bg-white/90 transition"
+                  className="ml-2 inline-flex items-center rounded-xl bg-rose-600/90 text-white px-3 py-1.5 text-sm font-semibold hover:bg-white/90 transition"
                 >
                   {item.label}
                 </NavLink>

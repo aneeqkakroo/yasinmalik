@@ -52,7 +52,7 @@ export default function JoinUsCard() {
       <Card className="mt-8 p-6">
         <h5 className="font-semibold text-white">Join Us</h5>
         <p className="mt-1 text-sm text-white/70">
-          If you’ve got any skill (e.g., Graphic Designing, Video Editing, Web Dev), be a part of our team.
+          Have a skill — design, video, web, or more? Join our team and use it for the cause of justice and freedom.
         </p>
 
         <form
