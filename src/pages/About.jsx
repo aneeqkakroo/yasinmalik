@@ -3,7 +3,7 @@ import TimelineList from "../components/TimelineList.jsx";
 import timeline from "../data/timeline.js";
 import Slideshow from "../components/Slideshow.jsx";
 import mediaPics from "../data/aboutmediapics.js";
-import YouTubeEmbed from "../components/YoutubeEmbed.jsx";
+import YouTubeEmbed from "../components/YouTubeEmbed.jsx";
 
 
 export default function About() {
