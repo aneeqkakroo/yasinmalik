@@ -74,7 +74,7 @@ export default function About() {
     <h4 className="px-4 pt-4 pb-2 text-lg font-semibold text-white">
       Who is Yasin Malik?
     </h4>
-    <YouTubeEmbed
+    <xTubeEmbed
       url="https://youtu.be/VjrhbxqHUBY"
       title="Aik Din Geo Ke Sath"
       cover
