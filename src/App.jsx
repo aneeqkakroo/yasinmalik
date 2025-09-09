@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollHandler from "./components/ScrollHandler.jsx";
+import { Analytics } from '@vercel/analytics/next';
 
 // Pages
 import Home from "./pages/Home.jsx";
@@ -31,6 +32,7 @@ function NotFound() {
 export default function App() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
+      <Analytics />
       <Navbar />
       <main className="pt-20">
         <ScrollHandler />
