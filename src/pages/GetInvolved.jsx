@@ -3,6 +3,7 @@ import { Section, Card, Button } from "../components/ui.jsx";
 import campaigns from "../data/campaigns.js";
 import Toast from "../components/Toast.jsx";
 import PostcodeToMP from "../components/PostcodeToMP";
+import JoinUsCard from "../components/JoinUsCard.jsx";
 
 export default function GetInvolved() {
   const [status, setStatus] = useState({ state: "idle", msg: "" });
@@ -108,6 +109,7 @@ export default function GetInvolved() {
         }
         onClose={() => setStatus({ state: "idle", msg: "" })}
       />
+      <JoinUsCard />
     </Section>
     {/*MP Finder*/}
     <Section title="Email your MP 🇬🇧" kicker="Campaign" id="MP">
