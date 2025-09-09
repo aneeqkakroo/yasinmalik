@@ -20,8 +20,8 @@ export default function JoinUsCard() {
       setStatus({ state: "loading", msg: "Submitting…" });
 
       // TODO: replace with your deployed Apps Script Web App URL
-      const ENDPOINT = import.meta.env.VITE_JOIN_US_ENDPOINT || "https://script.google.com/macros/s/AKfycbyHrlZ4-0B9umFli_iImhblcFukICZNXpBfz0BQ2n2GAMTMbKBT_5-T5WyifLYTOFDn_Q/exec";
-
+      const ENDPOINT = "/api/gsheets-join"
+      
       const res = await fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
