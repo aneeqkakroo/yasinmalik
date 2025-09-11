@@ -16,7 +16,7 @@ export default [
   {
     id: "r3",
     type: "Briefing Paper",
-    title: "Imprisonment of Yasin Malik in India",
+    title: "Imprisonment of Yasin Malik in India by Azmat Khan",
     href: "../resources/Briefing Paper by Azmat Khan.pdf",
     meta: "PDF, 16 pages",
   },
