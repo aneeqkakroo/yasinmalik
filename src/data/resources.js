@@ -18,7 +18,7 @@ export default [
     type: "Briefing Paper",
     title: "Imprisonment of Yasin Malik in India",
     href: "../resources/Briefing Paper by Azmat Khan.pdf",
-    meta: "Aljazeera Article",
+    meta: "PDF, 16 pages",
   },
   {
     id: "r4",
