@@ -40,7 +40,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/engagements/political" element={<Political />} />
-          <Route path="/engagements/social" element={<Social />} />
+          <Route path="/engagements/humanitarian" element={<Social />} />
           <Route path="/engagements/diplomatic" element={<Diplomatic />} />
           <Route path="/media" element={<Media />} />
           <Route path="/updates" element={<LatestUpdates />} />

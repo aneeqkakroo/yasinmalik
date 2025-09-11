@@ -4,7 +4,7 @@ import engagements from "../data/social.js";
 
 export default function Social() {
   return (
-    <Section title="Social Engagements" kicker="Engagements">
+    <Section title="Humanitarian Engagements" kicker="Engagements">
       <div className="grid gap-6">
         {engagements.map((e) => (
           <EngagementCard key={e.id} item={e} />

@@ -13,7 +13,7 @@ const navItems = [
     children: [
       { to: "/engagements/political", label: "Political Engagement" },
       { to: "/engagements/diplomatic", label: "Diplomatic Engagement" },
-      { to: "/engagements/social", label: "Social Engagement" },
+      { to: "/engagements/humanitarian", label: "Humanitarian Engagement" },
     ],
   },
 
