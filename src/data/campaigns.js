@@ -4,7 +4,7 @@ export default [
     title: "Sign the Petition",
     desc: "Sign our petition on change.org to help this campaign gain momentum",
     cta: "Sign now",
-    href: "https://www.change.org/Justice4YasinMalik",
+    href: "https://www.change.org/FreeYasinMalik",
   },
   {
     id: "c2",
