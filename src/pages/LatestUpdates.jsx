@@ -7,7 +7,7 @@ export default function LatestUpdates() {
   return (
     <Section title="Latest Updates" kicker="Media">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {updates.map((item) => (
+        {updates.toReversed().map((item) => (
           <UpdateCard key={item.id} item={item} />
         ))}
       </div>
